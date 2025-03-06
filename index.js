@@ -1,8 +1,10 @@
 function getLetterOccurrences(string) {
-    const out = {};
-    acc=Array.from(string)
-    for ( let cur in acc){ out[acc[cur]] = out[acc[cur]] ? out[acc[cur]] + 1 : 1};
-    return out;}
+    const rec = {};
+    //acc=Array.from(string)
+   // for ( let cur in acc){ out[acc[cur]] = out[acc[cur]] ? out[acc[cur]] + 1 : 1};
+    for (let cur of Array.from(string)){ rec[cur] = rec[cur] ? rec[cur] + 1 : 1};
+    
+    return rec;}
 
      const string = 'hello';   
      reslt=getLetterOccurrences(string);
